@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--
+Site name: My Travel List
+Developer: Pedro Santiago
+Term Number: 1209
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="This is a simple but handy travel list web app." />
+		<meta name="keywords" content="travel, list" />
+		<meta name="robots" content="follow" />
+		<!-- Allows content to size correctly to mobile displays -->
+		<meta name="viewport" content="target-densitydpi=device-dpi"/>
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<title>Add New Item</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	</head>
+		<body>
+			<!-- Page title -->
+			<div id="container">
+			<div id="header">
+			<h1>Add Item</h1>
+			<!-- Add Item form -->
+			<form name="addItem" id="addIem_form" action="#">
+				<fieldset>
+					<legend><b>Item information:</b></legend>
+					<h2>Category:</h2>
+					<select id="category">
+						<option value="" selected="selected">Select a category</option>
+						<option value="footwear">Foot Wear</option>
+						<option value="clothing">Clothing</option>
+						<option value="personalhygiene">Personal Hygiene</option>
+					</select><br /><br />
+					Item: <input type="text" name="item" id="itemName" size="30" placeholder="Add Item" /><br /><br />
+					Quantity: <input type="range" item="quantity" id="quantity" /><br /><br />
+					<section id="radio">
+					<h3>Trip options:</h3>
+					<p><label for="trip">Trip:
+					<input type="radio" id="roadTrip" name="trip" value="roadTrip" class="radio" />Road Trip
+					<input type="radio" id="planeTrip" name="trip" value="planeTrip" class="radio" />Plane Trip
+					</label></p><br />
+					Date: <input type="date" id="date" size="30" /><br /><br />
+					Notes: <textarea name="notes" id="add_notes" rows="3" cols="30" placeholder="Add some notes"></textarea><br />
+					<!-- Submit button -->
+					<input type="submit" value="Submit" onclick="storeItems();" /><br><br>
+					<!-- Display all data link -->
+					<a href="#" onclick="getItems();">Display all data</a><br />
+					<!-- Clear stored data link -->
+					<a href="#">Clear Stored data</a>
+					<input type="hidden" item="#" />
+				</fieldset>
+			</form>
+			<script src="js/main.js"></script>
+		</body>
+</html>
